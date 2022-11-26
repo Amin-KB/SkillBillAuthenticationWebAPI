@@ -5,13 +5,13 @@ namespace SkillBilAuth.Services
 {
     public static class FetchService
     {
-        private static readonly string connectionString = "Data Source=SQLSERVER;Initial Catalog=SkillBill;Persist Security Info=True;TrustServerCertificate=True;User ID=sa;Password=********";
+        
         public static SqlConnection con;
         public static void CreateTheConnection()
         {
             try
             {
-                con = new SqlConnection(connectionString);
+                con = new SqlConnection(ConfigurationService.connectionString);
                 con.Open();
 
             }
